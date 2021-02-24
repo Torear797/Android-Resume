@@ -11,8 +11,4 @@
         android:label="@string/m_profile"
         tools:layout="@layout/fragment_profile" />
 
-    <fragment
-        android:id="@+id/nav_logout"
-        android:name="ru.torear.resume.ui.exit.LogoutFragment" />
-
 </navigation>

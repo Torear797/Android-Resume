@@ -38,7 +38,6 @@ class MenuActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_profile,
-                R.id.nav_logout
             ), drawerLayout
         )
 
@@ -50,17 +49,11 @@ class MenuActivity : AppCompatActivity() {
         val fio: TextView = header.findViewById(R.id.nav_header_fio)
         val role: TextView = header.findViewById(R.id.nav_header_role)
         val avatarText: TextView = header.findViewById(R.id.avatar_textView)
-        fio.text = "Здравствуйте, " + App.user.first_name
-        role.text = "Ваша Роль: ${App.user.getRoleString()}"
-        avatarText.text = App.user.getInitials()
 
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            when (destination.id) {
-                R.id.nav_logout -> {
-                    App.logout(this)
-                }
-            }
-        }
+        fio.text = String.format(resources.getString(R.string.hello_user_text), App.user.first_name)
+        role.text = String.format(resources.getString(R.string.user_role_text), App.user.getRoleString())
+
+        avatarText.text = App.user.getInitials()
     }
 
 
