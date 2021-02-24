@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        style="@style/Theme.MaterialComponents.Light.DarkActionBar.Bridge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        android:background="#00929292"
+        android:filterTouchesWhenObscured="false"
+        android:scrollbarFadeDuration="250"
+        android:scrollbarSize="4dp"
+        android:splitMotionEvents="true"
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+        app:expanded="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:animationCache="true"
+            android:scrollbarDefaultDelayBeforeFade="400"
+            android:scrollbarFadeDuration="250"
+            android:splitMotionEvents="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            app:contentScrim="@color/translucent_scrim_top_center"
+            app:expandedTitleMargin="32dp"
+            app:layout_scrollFlags="scroll|snap"
+            app:toolbarId="@+id/toolbar">
+
+            <RelativeLayout
+                android:id="@+id/rellay1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grad"
+                android:paddingBottom="20dp"
+                app:layout_collapseMode="pin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:id="@+id/imgUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="9dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/circle_img_bg"
+                        android:padding="3dp"
+                        android:scaleType="centerInside"
+                        app:shapeAppearanceOverlay="@style/circleImageView" />
+
+                    <TextView
+                        android:id="@+id/avatar_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/profile_image"
+                        android:layout_alignTop="@+id/profile_image"
+                        android:layout_alignEnd="@+id/profile_image"
+                        android:layout_alignBottom="@+id/profile_image"
+                        android:layout_margin="1dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="85dp"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        tool:text="AA" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_fio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgUser"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/white"
+                    android:textSize="32sp"
+                    tool:text="Имя Фамилия" />
+
+
+                <TextView
+                    android:id="@+id/tv_regions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_fio"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    tool:text="Мои регионы" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_scrim_height_top"
+                android:background="@drawable/scrim_top"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_scrolling" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/fab_desc"
+        android:focusable="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|right|end"
+        app:rippleColor="@color/colorPrimaryDark"
+        app:srcCompat="@drawable/ic_android_black_24dp"
+        app:tint="@android:color/white" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
