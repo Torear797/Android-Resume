@@ -33,7 +33,8 @@ class ProfileFragment : Fragment() {
         val logoutBtn: LinearLayout = view.findViewById(R.id.logout)
 
         avatarText.text = App.user.getInitials()
-        fio.text = "${App.user.first_name} ${App.user.surname}"
+        fio.text =
+            String.format(resources.getString(R.string.fio), App.user.first_name, App.user.surname)
         regions.text = App.user.getRegionString()
         roleName.text = App.user.getRoleString()
         phone.text = App.user.phone

@@ -11,4 +11,10 @@
 
     <string name="hello_user_text">Здравствуйте, %1$s</string>
     <string name="user_role_text">Ваша Роль: %1$s</string>
+    <string name="news">Новости</string>
+    <string name="share_desc">Кнопка шеринга</string>
+    <string name="arrow_desc">Стрелка</string>
+    <string name="news_img">news img</string>
+    <string name="send_to">Выбирете приложение</string>
+    <string name="fio">%1$s %2$s</string>
 </resources>

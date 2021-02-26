@@ -1,7 +1,7 @@
 package ru.torear.resume
 
-class Role (
-    var id: Int? = null,
-    var name: String? = null,
-    var description: String? = null
+data class Role (
+    val id: Int,
+    val name: String,
+    val description: String
 )

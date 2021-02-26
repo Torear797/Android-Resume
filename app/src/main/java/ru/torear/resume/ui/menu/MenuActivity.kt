@@ -38,6 +38,7 @@ class MenuActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_profile,
+                R.id.nav_news
             ), drawerLayout
         )
 
@@ -51,7 +52,8 @@ class MenuActivity : AppCompatActivity() {
         val avatarText: TextView = header.findViewById(R.id.avatar_textView)
 
         fio.text = String.format(resources.getString(R.string.hello_user_text), App.user.first_name)
-        role.text = String.format(resources.getString(R.string.user_role_text), App.user.getRoleString())
+        role.text =
+            String.format(resources.getString(R.string.user_role_text), App.user.getRoleString())
 
         avatarText.text = App.user.getInitials()
     }

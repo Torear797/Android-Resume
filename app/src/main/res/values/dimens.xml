@@ -8,4 +8,5 @@
     <dimen name="text_scrim_height_top">55dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="fab_size">56dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

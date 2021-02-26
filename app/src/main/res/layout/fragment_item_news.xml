@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_news"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/n_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/n_text"
+            app:layout_constraintEnd_toStartOf="@+id/n_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Заголовок" />
+
+
+        <TextView
+            android:id="@+id/n_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintBottom_toTopOf="@+id/n_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/n_title"
+            tools:text="Основной текст" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@color/grey_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/n_imageView" />
+
+        <ImageButton
+            android:id="@+id/n_btn_share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@color/transparant"
+            android:contentDescription="@string/share_desc"
+            android:scaleType="centerInside"
+            android:src="@drawable/share_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <ImageView
+            android:id="@+id/n_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:contentDescription="@string/arrow_desc"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            app:layout_constraintBottom_toBottomOf="@+id/n_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/n_title" />
+
+        <TextView
+            android:id="@+id/n_create_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_1"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:text="20.02.2021" />
+
+        <ImageView
+            android:id="@+id/n_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:contentDescription="@string/news_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/n_text"
+            app:srcCompat="@drawable/news3" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/MyGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="n_create_date, n_btn_share, view, n_text, n_imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,22 +1,22 @@
 package ru.torear.resume
 
 data class User(
-    var id: Int? = null,
-    var first_name: String? = "",
-    var surname: String? = "",
-    var patronymic: String? = "",
-    var phone: String? = "",
-    var email: String? = "",
-    var role: List<Role>? = null,
-    var regions: Map<Int, String>? = null,
-    var create_date: String? = "",
+    val id: Int,
+    val first_name: String,
+    val surname: String,
+    val patronymic: String,
+    val phone: String,
+    val email: String,
+    val role: List<Role>,
+    val regions: Map<Int, String>,
+    val create_date: String,
 ) {
     fun getInitials(): String =
-        (first_name?.get(0) ?: "0").toString() + (surname?.get(0) ?: "0").toString()
+        first_name[0].toString() + surname[0].toString()
 
     fun getRegionString(): String {
         var regionsString = ""
-        regions?.forEach {
+        regions.forEach {
             if (regionsString.isNotEmpty()) regionsString += ", "
             regionsString += it.value
         }
@@ -26,9 +26,9 @@ data class User(
     fun getRoleString(): String {
         var resault = ""
 
-        val iterator = role?.toList()?.iterator()
+        val iterator = role.toList().iterator()
 
-        iterator?.forEach { role ->
+        iterator.forEach { role ->
 
             if (resault.isNotEmpty()) resault += ", "
             resault += role.description
@@ -40,8 +40,8 @@ data class User(
     fun getRolesIds(): List<Int> {
         val arrayRoles: MutableList<Int> = mutableListOf()
 
-        role?.forEach {
-            it.id?.let { it1 -> arrayRoles.add(it1) }
+        role.forEach {
+            it.id.let { it1 -> arrayRoles.add(it1) }
         }
 
         return arrayRoles
@@ -50,8 +50,8 @@ data class User(
     fun getRolesArrayName(): List<String> {
         val arrayRoles: MutableList<String> = mutableListOf()
 
-        role?.forEach {
-            it.name?.let { it1 -> arrayRoles.add(it1) }
+        role.forEach {
+            it.name.let { it1 -> arrayRoles.add(it1) }
         }
 
         return arrayRoles

@@ -16,11 +16,14 @@
     <color name="solidCircle">#AAFFFFFF</color>
     <color name="direction_bg">#49BEFF</color>
     <color name="grey">#E5E5E5</color>
+    <color name="grey_2">#F1F1F1</color>
     <color name="headings">#3797CF</color>
 
+    <color name="transparant">#00000000</color>
 
     <color name="translucent_scrim_top">#33000000</color>
     <color name="translucent_scrim_top_center">#26000000</color>
     <color name="translucent_scrim_bottom">#4D000000</color>
     <color name="translucent_scrim_bottom_center">#40000000</color>
+    <color name="grey_1">#828A99</color>
 </resources>
