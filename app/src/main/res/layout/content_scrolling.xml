@@ -135,7 +135,7 @@
                     android:fontFamily="sans-serif-light"
                     android:textColor="#000000"
                     android:textSize="18sp"
-                    tool:text="facebook.com/joeytrib" />
+                    />
 
                 <View
                     android:layout_width="match_parent"

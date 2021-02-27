@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
-    android:name="ru.torear.resume.ui.news.NewsFragment"
+    android:name="ru.torear.resume.ui.category.CategoryFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_2"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".ui.news.NewsFragment"
-    tools:listitem="@layout/item_news" />
+    tools:context=".ui.category.CategoryFragment"
+    tools:listitem="@layout/item_store_item" />

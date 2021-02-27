@@ -16,7 +16,7 @@ class SplashScreenActivity : AppCompatActivity() {
         val role: List<Role> = listOf(Role(1, "admin", "Android разработчик"))
         val region: Map<Int, String> = mapOf(1 to "Белгород")
 
-        App.user = User(797, "Артём", "Клыч", "", "8-915-***-**-**","email@ya.ru", role, region, "24-02-2021")
+        App.user = User(797, "Артём", "Клыч", "", "8-915-***-**-**","email@ya.ru", role, region, "22-06-1998")
 
         startActivity(Intent(this, MenuActivity::class.java))
         finish()

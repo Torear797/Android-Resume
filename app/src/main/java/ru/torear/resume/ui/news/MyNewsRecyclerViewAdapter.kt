@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.widget.Group
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import ru.torear.resume.R
@@ -24,7 +23,7 @@ class MyNewsRecyclerViewAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
                 LayoutInflater.from(parent.context)
-                        .inflate(R.layout.fragment_item_news, parent, false)
+                        .inflate(R.layout.item_news, parent, false)
         )
     }
 
@@ -38,15 +37,15 @@ class MyNewsRecyclerViewAdapter(
     }
 
     override fun onViewAttachedToWindow(holder: ViewHolder) {
-        holder.btnArrow.setOnClickListener {
-            if (holder.myGroup.visibility == View.VISIBLE) {
-                holder.myGroup.visibility = View.GONE
-                holder.btnArrow.animate().rotation(0F)
-            } else {
-                holder.myGroup.visibility = View.VISIBLE
-                holder.btnArrow.animate().rotation(-180F)
-            }
-        }
+//        holder.btnArrow.setOnClickListener {
+//            if (holder.myGroup.visibility == View.VISIBLE) {
+//                holder.myGroup.visibility = View.GONE
+//                holder.btnArrow.animate().rotation(0F)
+//            } else {
+//                holder.myGroup.visibility = View.VISIBLE
+//                holder.btnArrow.animate().rotation(-180F)
+//            }
+//        }
 
 
         holder.btnShare.setOnClickListener {
@@ -57,7 +56,7 @@ class MyNewsRecyclerViewAdapter(
     }
 
     override fun onViewDetachedFromWindow(holder: ViewHolder) {
-        deleteListener(holder.btnArrow)
+//        deleteListener(holder.btnArrow)
         deleteListener(holder.btnShare)
     }
 
@@ -70,8 +69,8 @@ class MyNewsRecyclerViewAdapter(
         val image: ImageView = view.findViewById(R.id.n_imageView)
 
         var btnShare: ImageButton = view.findViewById(R.id.n_btn_share)
-        var btnArrow: ImageView = view.findViewById(R.id.n_arrow)
-        var myGroup: Group = view.findViewById(R.id.MyGroup)
+//        var btnArrow: ImageView = view.findViewById(R.id.n_arrow)
+//        var myGroup: Group = view.findViewById(R.id.MyGroup)
     }
 
     private fun deleteListener(view: View) {

@@ -13,7 +13,7 @@ import ru.torear.resume.models.StoreItems
 
 class StoreAdapter(
         private var values: List<StoreItems>,
-        private val listener: OnItemClickListener
+        private val listener: OnItemClickListener?
 ) : RecyclerView.Adapter<StoreAdapter.ViewHolder>() {
 
     interface OnItemClickListener {
@@ -30,15 +30,19 @@ class StoreAdapter(
     }
 
     override fun onViewAttachedToWindow(holder: ViewHolder) {
-        holder.card.setOnClickListener {
-            if (holder.adapterPosition != RecyclerView.NO_POSITION) {
-                listener.onBayClick(values[holder.adapterPosition])
+        if(listener != null) {
+            holder.card.setOnClickListener {
+                if (holder.adapterPosition != RecyclerView.NO_POSITION) {
+                    listener.onBayClick(values[holder.adapterPosition])
+                }
             }
         }
     }
 
     override fun onViewDetachedFromWindow(holder: ViewHolder) {
-        deleteListener(holder.card)
+        if(listener != null) {
+            deleteListener(holder.card)
+        }
     }
 
     private fun deleteListener(view: View) {

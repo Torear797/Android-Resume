@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.RecyclerView
@@ -27,8 +26,8 @@ class StoreFragment : Fragment(), StoreAdapter.OnItemClickListener {
     private var currentBalance: TextView? = null
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_store, container, false)
 
@@ -38,14 +37,14 @@ class StoreFragment : Fragment(), StoreAdapter.OnItemClickListener {
 
         currentBalanceValue = Hawk.get("balance", 0)
         currentBalance!!.text =
-                String.format(resources.getString(R.string.balance_text), currentBalanceValue)
+            String.format(resources.getString(R.string.balance_text), currentBalanceValue)
         seekBar!!.progress = currentBalanceValue
 
         seekBar!!.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 currentBalanceValue = seekBar?.progress ?: 0
                 currentBalance!!.text =
-                        String.format(resources.getString(R.string.balance_text), currentBalanceValue)
+                    String.format(resources.getString(R.string.balance_text), currentBalanceValue)
                 Hawk.put("balance", currentBalanceValue)
             }
 
@@ -110,137 +109,143 @@ class StoreFragment : Fragment(), StoreAdapter.OnItemClickListener {
         }
     }
 
-    private fun setTestData(samsung: Boolean, huawei: Boolean, honor: Boolean, vivo: Boolean, xiaomi: Boolean) {
+    private fun setTestData(
+        samsung: Boolean,
+        huawei: Boolean,
+        honor: Boolean,
+        vivo: Boolean,
+        xiaomi: Boolean
+    ) {
         items.clear()
 
         var index = 0
 
         if (samsung) {
             items.add(
-                    index,
-                    StoreItems
+                index,
+                StoreItems
                     (
-                            index++,
-                            "S21",
-                            "Samsung",
-                            8000,
-                            R.drawable.phone1
-                    )
+                    index++,
+                    "S21",
+                    resources.getString(R.string.samsung),
+                    8000,
+                    R.drawable.phone1
+                )
             )
 
             items.add(
-                    index,
-                    StoreItems
+                index,
+                StoreItems
                     (
-                            index++,
-                            "Note20",
-                            "Samsung",
-                            7000,
-                            R.drawable.phone2
-                    )
+                    index++,
+                    "Note20",
+                    resources.getString(R.string.samsung),
+                    7000,
+                    R.drawable.phone2
+                )
             )
         }
 
         if (huawei) {
             items.add(
-                    index,
-                    StoreItems
+                index,
+                StoreItems
                     (
-                            index++,
-                            "P40 Pro+",
-                            "HUAWEI",
-                            6800,
-                            R.drawable.phone3
-                    )
+                    index++,
+                    "P40 Pro+",
+                    resources.getString(R.string.huawei),
+                    6800,
+                    R.drawable.phone3
+                )
             )
 
             items.add(
-                    index,
-                    StoreItems
+                index,
+                StoreItems
                     (
-                            index++,
-                            "Y8p",
-                            "HUAWEI",
-                            5500,
-                            R.drawable.phone4
-                    )
+                    index++,
+                    "Y8p",
+                    resources.getString(R.string.huawei),
+                    5500,
+                    R.drawable.phone4
+                )
             )
         }
 
         if (honor) {
             items.add(
-                    index,
-                    StoreItems
+                index,
+                StoreItems
                     (
-                            index++,
-                            "10I",
-                            "Honor",
-                            2540,
-                            R.drawable.phone5
-                    )
+                    index++,
+                    "10I",
+                    resources.getString(R.string.honor),
+                    2540,
+                    R.drawable.phone5
+                )
             )
 
             items.add(
-                    index,
-                    StoreItems
+                index,
+                StoreItems
                     (
-                            index++,
-                            "30",
-                            "Honor",
-                            6900,
-                            R.drawable.phone6
-                    )
+                    index++,
+                    "30",
+                    resources.getString(R.string.honor),
+                    6900,
+                    R.drawable.phone6
+                )
             )
         }
 
         if (vivo) {
             items.add(
-                    index,
-                    StoreItems
+                index,
+                StoreItems
                     (
-                            index++,
-                            "X50 Pro",
-                            "Vivo",
-                            8200,
-                            R.drawable.phone7
-                    )
+                    index++,
+                    "X50 Pro",
+                    resources.getString(R.string.vivo),
+                    8200,
+                    R.drawable.phone7
+                )
             )
 
             items.add(
-                    index,
-                    StoreItems
+                index,
+                StoreItems
                     (
-                            index++,
-                            "X50",
-                            "Vivo",
-                            5200,
-                            R.drawable.phone8
-                    )
+                    index++,
+                    "X50",
+                    resources.getString(R.string.vivo),
+                    5200,
+                    R.drawable.phone8
+                )
             )
         }
 
         if (xiaomi) {
             items.add(
-                    index,
-                    StoreItems
+                index,
+                StoreItems
                     (
-                            index++,
-                            "Mi 10T",
-                            "Xiaomi",
-                            5400,
-                            R.drawable.phone9
-                    )
+                    index++,
+                    "Mi 10T",
+                    resources.getString(R.string.xiaomi),
+                    5400,
+                    R.drawable.phone9
+                )
             )
             items.add(
-                    index,
-                    StoreItems
+                index,
+                StoreItems
                     (
-                            index,
-                            "Note 8 Pro",
-                            "Xiaomi",
-                            2350,
-                            R.drawable.phone10
-                    )
+                    index,
+                    "Note 8 Pro",
+                    resources.getString(R.string.xiaomi),
+                    2350,
+                    R.drawable.phone10
+                )
             )
         }
     }
@@ -253,10 +258,10 @@ class StoreFragment : Fragment(), StoreAdapter.OnItemClickListener {
     }
 
     override fun onBayClick(item: StoreItems) {
-        if(item.price <= currentBalanceValue){
+        if (item.price <= currentBalanceValue) {
             currentBalanceValue -= item.price
             currentBalance!!.text =
-                    String.format(resources.getString(R.string.balance_text), currentBalanceValue)
+                String.format(resources.getString(R.string.balance_text), currentBalanceValue)
             seekBar!!.progress = currentBalanceValue
             Hawk.put("balance", currentBalanceValue)
         } else {

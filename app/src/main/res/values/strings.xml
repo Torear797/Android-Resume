@@ -4,7 +4,7 @@
     <string name="yours_role_txt">Роль</string>
     <string name="phone_txt">Телефон</string>
     <string name="email_txt">email</string>
-    <string name="create_date_txt">Дата создания</string>
+    <string name="create_date_txt">День рождения</string>
     <string name="changePassText">Сменить пароль</string>
     <string name="logoutText">Выйти</string>
     <string name="fab_desc">fab</string>
@@ -28,4 +28,5 @@
     <string name="xiaomi">Xiaomi</string>
     <string name="item_store_image_desc">item Store image desc</string>
     <string name="no_balls">У вас не достаточно баллов!</string>
+    <string name="category">Категории</string>
 </resources>
