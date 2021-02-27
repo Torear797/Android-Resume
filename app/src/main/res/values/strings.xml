@@ -17,4 +17,15 @@
     <string name="news_img">news img</string>
     <string name="send_to">Выбирете приложение</string>
     <string name="fio">%1$s %2$s</string>
+    <string name="balance_text">Текущий баланс: %1$s</string>
+    <string name="store_price">%1$s баллов</string>
+
+    <string name="store">Магазин</string>
+    <string name="samsung">Samsung</string>
+    <string name="huawei">Huawei</string>
+    <string name="honor">Honor</string>
+    <string name="vivo">Vivo</string>
+    <string name="xiaomi">Xiaomi</string>
+    <string name="item_store_image_desc">item Store image desc</string>
+    <string name="no_balls">У вас не достаточно баллов!</string>
 </resources>

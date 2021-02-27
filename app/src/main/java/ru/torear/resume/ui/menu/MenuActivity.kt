@@ -38,7 +38,8 @@ class MenuActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_profile,
-                R.id.nav_news
+                R.id.nav_news,
+                R.id.nav_store
             ), drawerLayout
         )
 

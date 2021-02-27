@@ -13,8 +13,8 @@ import ru.torear.resume.R
 import ru.torear.resume.models.News
 
 class MyNewsRecyclerViewAdapter(
-    private val values: List<News>,
-    private val listener: OnNewsClickListener
+        private val values: List<News>,
+        private val listener: OnNewsClickListener
 ) : RecyclerView.Adapter<MyNewsRecyclerViewAdapter.ViewHolder>() {
 
     interface OnNewsClickListener {
@@ -23,8 +23,8 @@ class MyNewsRecyclerViewAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            LayoutInflater.from(parent.context)
-                .inflate(R.layout.fragment_item_news, parent, false)
+                LayoutInflater.from(parent.context)
+                        .inflate(R.layout.fragment_item_news, parent, false)
         )
     }
 
@@ -34,7 +34,7 @@ class MyNewsRecyclerViewAdapter(
         holder.text.text = item.text
         holder.data.text = item.createDate
         Picasso.get().load(item.imgRes).placeholder(R.drawable.ic_baseline_image_search_24).noFade()
-            .into(holder.image)
+                .into(holder.image)
     }
 
     override fun onViewAttachedToWindow(holder: ViewHolder) {
