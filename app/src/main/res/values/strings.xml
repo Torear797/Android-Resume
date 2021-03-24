@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Резюме</string>
-    <string name="m_profile">Профиль</string>
+    <string name="m_profile">Обо мне</string>
     <string name="yours_role_txt">Роль</string>
     <string name="phone_txt">Телефон</string>
     <string name="email_txt">email</string>
@@ -29,4 +29,27 @@
     <string name="item_store_image_desc">item Store image desc</string>
     <string name="no_balls">У вас не достаточно баллов!</string>
     <string name="category">Категории</string>
+    <string name="aboutMe">Дополнительная информация</string>
+
+    <string name="about_me_text1">Меня зовут Артём. Я студент первого курса магистратуры Белгородского государственного технологического университета им. В. Г. Шухова. Специальность -
+        "Разработка корпоративных информационных систем". - 2021 г.</string>
+
+    <string name="about_me_text2">Пареллельно с учебой/работой увлекаюсь игрой в дартс и бильярдом. Читаю книжки - Терри Пратчет, Ден Браун, Дж. Р. Р. Толкиен и др.</string>
+
+    <string name="my_edu_text">В 2016г. я поступил в БГТУ им. В. Г. Шухова на специальность "Информационные системы и технологии".
+        В 2020г. продолжил обучение в магистратуре по направлению "Разработка корпоративных информационных систем".
+    </string>
+
+    <string name="my_work_text">В качестве дальнейшей работы вижу себя в роли мобильного разработчика. Есть желание попробовать разработку под ios. В настоящее время занимаюсь android и web разработкой.</string>
+    <string name="my_plans_text">В ближайших планах у меня закончить магистратуру, после чего отслужить год в армии и уже после устроится на интересную работу.</string>
+
+    <string name="examples">Примеры</string>
+    <string name="about_me">Обо мне</string>
+    <string name="my_edu">Моя учёба</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bgtu">BGTU</string>
+    <string name="my_work_title">Моя работа</string>
+    <string name="my_plans_title">Мои планы</string>
+    <string name="contacts">Контакты</string>
 </resources>

@@ -12,6 +12,30 @@
         tools:layout="@layout/fragment_profile" />
 
     <fragment
+        android:id="@+id/nav_my_edu"
+        android:name="ru.torear.resume.ui.my_edu.MyEduFragment"
+        android:label="@string/my_edu"
+        tools:layout="@layout/fragment_my_edu" />
+
+    <fragment
+        android:id="@+id/nav_my_work"
+        android:name="ru.torear.resume.ui.my_work.MyWorkFragment"
+        android:label="@string/my_work_title"
+        tools:layout="@layout/fragment_my_work" />
+
+    <fragment
+        android:id="@+id/nav_my_plans"
+        android:name="ru.torear.resume.ui.my_plans.MyPlansFragment"
+        android:label="@string/my_plans_title"
+        tools:layout="@layout/fragment_my_plans" />
+
+    <fragment
+        android:id="@+id/nav_my_contacts"
+        android:name="ru.torear.resume.ui.contacts.ContactsFragment"
+        android:label="@string/contacts"
+        tools:layout="@layout/fragment_contacts" />
+
+    <fragment
         android:id="@+id/nav_news"
         android:name="ru.torear.resume.ui.news.NewsFragment"
         android:label="@string/news"

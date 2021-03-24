@@ -31,6 +31,7 @@ class ProfileFragment : Fragment() {
         val email: TextView = view.findViewById(R.id.email)
         val createDate: TextView = view.findViewById(R.id.create_date)
         val logoutBtn: LinearLayout = view.findViewById(R.id.logout)
+        val aboutMeBtn: LinearLayout = view.findViewById(R.id.aboutMe)
 
         avatarText.text = App.user.getInitials()
         fio.text =
@@ -43,6 +44,11 @@ class ProfileFragment : Fragment() {
 
         logoutBtn.setOnClickListener {
             App.logout(requireActivity())
+        }
+
+        aboutMeBtn.setOnClickListener {
+            val myBottomSheet = AboutMeBottomSheetDialog()
+            myBottomSheet.show(childFragmentManager, myBottomSheet.tag)
         }
 
         return view

@@ -8,24 +8,48 @@
         android:icon="@drawable/ic_baseline_account_circle_24"
         android:title="@string/m_profile" />
 
+    <item
+        android:id="@+id/nav_my_edu"
+        android:icon="@drawable/ic_baseline_cast_for_education_24"
+        android:title="@string/my_edu" />
+
+    <item
+        android:id="@+id/nav_my_work"
+        android:icon="@drawable/ic_baseline_work_24"
+        android:title="@string/my_work_title" />
+
+    <item
+        android:id="@+id/nav_my_plans"
+        android:icon="@drawable/ic_baseline_note_alt_24"
+        android:title="@string/my_plans_title" />
+
+    <item
+        android:id="@+id/nav_my_contacts"
+        android:icon="@drawable/ic_baseline_contacts_24"
+        android:title="@string/contacts" />
+
     <group
         android:id="@+id/dopOptions"
         android:checkableBehavior="single">
 
-        <item
-            android:id="@+id/nav_news"
-            android:icon="@drawable/ic_baseline_local_library_24"
-            android:title="@string/news"/>
+        <item android:title="@string/examples">
+            <menu>
+                <item
+                    android:id="@+id/nav_news"
+                    android:icon="@drawable/ic_baseline_local_library_24"
+                    android:title="@string/news" />
 
-        <item
-            android:id="@+id/nav_category"
-            android:icon="@drawable/ic_baseline_category_24"
-            android:title="@string/category"/>
+                <item
+                    android:id="@+id/nav_category"
+                    android:icon="@drawable/ic_baseline_category_24"
+                    android:title="@string/category" />
 
-        <item
-            android:id="@+id/nav_store"
-            android:icon="@drawable/ic_baseline_storefront_24"
-            android:title="@string/store"/>
+                <item
+                    android:id="@+id/nav_store"
+                    android:icon="@drawable/ic_baseline_storefront_24"
+                    android:title="@string/store" />
+            </menu>
+        </item>
     </group>
 
 </menu>

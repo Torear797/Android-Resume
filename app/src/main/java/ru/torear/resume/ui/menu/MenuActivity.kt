@@ -29,19 +29,23 @@ class MenuActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val navHostFragment =
-                supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
 
         appBarConfiguration = AppBarConfiguration(
-                setOf(
-                        R.id.nav_profile,
-                        R.id.nav_news,
-                        R.id.nav_store,
-                        R.id.nav_category
-                ), drawerLayout
+            setOf(
+                R.id.nav_profile,
+                R.id.nav_news,
+                R.id.nav_store,
+                R.id.nav_category,
+                R.id.nav_my_edu,
+                R.id.nav_my_work,
+                R.id.nav_my_plans,
+                R.id.nav_my_contacts
+            ), drawerLayout
         )
 
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -55,12 +59,12 @@ class MenuActivity : AppCompatActivity() {
 
         fio.text = String.format(resources.getString(R.string.hello_user_text), App.user.first_name)
         role.text =
-                String.format(resources.getString(R.string.user_role_text), App.user.getRoleString())
+            String.format(resources.getString(R.string.user_role_text), App.user.getRoleString())
 
         avatarText.text = App.user.getInitials()
     }
 
 
     override fun onSupportNavigateUp(): Boolean =
-            findNavController(R.id.nav_host_fragment).navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+        findNavController(R.id.nav_host_fragment).navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
 }
